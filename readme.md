@@ -1,3 +1,47 @@
+### SET ENV ANDROID
+
+```bash
+export ANDROID_HOME=/home/anis/Android/Sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+```
+
+### Create Project Ionic
+
+```bash
+ionic start io-cuaca tabs --type=angular
+```
+
+### Add Android to Project
+
+```bash
+ionic cordova prepare android
+```
+
+### Running App on Android
+
+```bash
+ionic cordova run android --livereload
+```
+
+### Cek emulator
+
+```bash
+emulator -list-avds
+```
+
+
+
+## IONIC
+
+### IONIC generate
+
+```
+ionic generate page contact
+```
+
+### Route
+
+```ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -56,3 +100,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}
+```

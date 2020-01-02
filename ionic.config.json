@@ -1,5 +1,7 @@
 {
   "name": "io-cuaca",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
