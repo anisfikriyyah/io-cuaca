@@ -6,4 +6,28 @@
 
 <ion-content>
 
+  <ion-list-header>
+    <ion-label>{{ name || 'No name'}}</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input 
+      [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  
+
+  <form #f="ngForm" (ngSubmit)="onSubmitForm(f)" novalidate>
+    <input name="first" ngModel required #first="ngModel">
+    <input name="last" ngModel type="email" required>
+    <button>Submit</button>
+  </form>
+  
+  <p>First name value: {{ first.value }}</p>
+  <p>First name valid: {{ first.valid }}</p>
+  <p>Form value: {{ f.value | json }}</p>
+  <p>Form valid: {{ f.valid }}</p>
+
+  <ion-button color="primary" (click)="AddNews(box.value)">Add</ion-button>
 </ion-content>
